@@ -132,7 +132,7 @@ export default {
   methods: {
     async fetchUserInfo() {
             try {
-                const response = await fetch('http://localhost:8080/UserInformation', {
+                const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
                     method: 'GET',
                     credentials: 'include', // Use 'include' to send cookies with the request
                     headers: {
@@ -154,7 +154,7 @@ export default {
       },
     async logout() {
     try {
-      const response = await fetch('http://localhost:8080/Logout', {
+      const response = await fetch('https://coogtech-backend.vercel.app/Logout', {
         method: 'POST',
         credentials: 'include', // Use 'include' to send cookies with the request
         headers: {

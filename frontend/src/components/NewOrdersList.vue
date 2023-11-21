@@ -45,7 +45,7 @@ const unapprovedCustomOrders = ref([]);
 
 const fetchUnapprovedOrders = async () => {
   try {
-    const response = await axios.get('http://localhost:8080/adminData/Reports/Unapproved-Orders');
+    const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Unapproved-Orders');
     unapprovedOrders.value = response.data.unapprovedOrders;
   } catch (error) {
     console.error('Error fetching unapproved orders:', error);
@@ -54,7 +54,7 @@ const fetchUnapprovedOrders = async () => {
 
 const fetchUnapprovedCustomOrders = async () => {
   try {
-    const response = await axios.get('http://localhost:8080/adminData/Reports/Unapproved-Custom-Orders');
+    const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Unapproved-Custom-Orders');
     unapprovedCustomOrders.value = response.data.unapprovedCustomOrders;
   } catch (error) {
     console.error('Error fetching unapproved custom orders:', error);

@@ -112,7 +112,7 @@ export default {
     methods: {
         async fetchUserInfo() {
         try {
-        const response = await fetch('http://localhost:8080/UserInformation', {
+        const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
             method: 'GET',
             credentials: 'include', // Use 'include' to send cookies with the request
             headers: {
@@ -134,7 +134,7 @@ export default {
     },
         async loadCustomerInfo() {
             try {
-                const response = await axios.get('http://localhost:8080/customerData/AccountInfo/', {
+                const response = await axios.get('https://coogtech-backend.vercel.app/customerData/AccountInfo/', {
                     withCredentials: true // Include credentials for authentication if needed
                 });
 
@@ -157,7 +157,7 @@ export default {
             try {
                 const formattedDate = moment(this.DateScheduled).format('MM/DD/YYYY');
 
-                const response = await axios.post('http://localhost:8080/customerData/CustomOrders', {
+                const response = await axios.post('https://coogtech-backend.vercel.app/customerData/CustomOrders', {
                     Username: this.Username,
                     StatusID: 1,
                     Address: this.Address,

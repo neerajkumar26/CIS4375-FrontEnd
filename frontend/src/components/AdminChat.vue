@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     setupSocketConnection() {
-      const socket = io('http://localhost:8080');
+      const socket = io('https://coogtech-backend.vercel.app');
 
       // Join the room with role, CustomOrderID, and username when connected
       socket.emit('join room', { CustomOrderID: this.customOrderID, role: this.role, username: this.username });
@@ -101,7 +101,7 @@ export default {
     },
     async fetchChatHistory() {
   try {
-    const response = await fetch(`http://localhost:8080/chat-history/${this.customOrderID}`);
+    const response = await fetch(`https://coogtech-backend.vercel.app/chat-history/${this.customOrderID}`);
     const data = await response.json();
     console.log('Received chat history data:', data);
 
@@ -150,7 +150,7 @@ export default {
       // Check if the message input is not empty
       if (this.messageInput.trim() !== '') {
         // Send message to the server with role, CustomOrderID, username, and message text
-        const socket = io('http://localhost:8080');
+        const socket = io('https://coogtech-backend.vercel.app');
         socket.emit('chat message', {
           customOrderID: this.customOrderID,
           role: this.role,
@@ -185,7 +185,7 @@ export default {
           const imageData = reader.result; // Base64 encoded image data
           
           // Emit the image data to the server via Socket.IO
-          const socket = io('http://localhost:8080');
+          const socket = io('https://coogtech-backend.vercel.app');
           socket.emit('image upload', { image: imageData, customOrderID: this.customOrderID, username: this.username, role: this.role });
         };
 

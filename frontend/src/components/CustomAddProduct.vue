@@ -76,7 +76,7 @@ export default {
         formData.append('Quantity', customProduct.value.Quantity);
         formData.append('DesignImage', customProduct.value.DesignImage);
 
-        const response = await axios.post('http://localhost:8080/adminData/CustomProducts', formData, {
+        const response = await axios.post('https://coogtech-backend.vercel.app/adminData/CustomProducts', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -86,7 +86,7 @@ export default {
         console.log(CustomProductID)
         console.log(props.customOrderID)
 
-        await axios.post(`http://localhost:8080/adminData/CustomOrders/${props.customOrderID}/products`, {
+        await axios.post(`https://coogtech-backend.vercel.app/adminData/CustomOrders/${props.customOrderID}/products`, {
           CustomProductID: CustomProductID,
           Quantity: customProduct.value.Quantity,
 

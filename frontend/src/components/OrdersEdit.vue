@@ -48,7 +48,7 @@ export default {
     async updateStatus() {
       // Send a request to your backend API to update the status
       try {
-        const response = await fetch(`http://localhost:8080/adminData/Orders/${this.orderID}`, {
+        const response = await fetch(`https://coogtech-backend.vercel.app/adminData/Orders/${this.orderID}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export default {
       // Send a request to your backend API to update the date delivered
       const formattedDate = moment(this.selectedDateDelivered ).format('MM/DD/YYYY');
       try {
-        const response = await fetch(`http://localhost:8080/adminData/Orders/${this.orderID}`, {
+        const response = await fetch(`https://coogtech-backend.vercel.app/adminData/Orders/${this.orderID}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export default {
     async deleteOrder() {
       // Send a request to your backend API to delete the order
       try {
-        const response = await fetch(`http://localhost:8080/adminData/Orders/${this.orderID}`, {
+        const response = await fetch(`https://coogtech-backend.vercel.app/adminData/Orders/${this.orderID}`, {
           method: 'DELETE',
         });
 
@@ -120,7 +120,7 @@ export default {
   async mounted() {
     // Fetch available statuses from your backend API
     try {
-      const response = await fetch('http://localhost:8080/adminData/Status');
+      const response = await fetch('https://coogtech-backend.vercel.app/adminData/Status');
       if (response.ok) {
         this.orderStatuses = await response.json();
       } else {

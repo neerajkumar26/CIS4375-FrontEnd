@@ -77,7 +77,7 @@ import axios from 'axios';
     methods: {
     async fetchCustomerInfo() {
       try {
-        const response = await axios.get('http://localhost:8080/customerData/AccountInfo/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/customerData/AccountInfo/', {
           withCredentials: true
         });
 
@@ -115,7 +115,7 @@ import axios from 'axios';
   });
 
   // Send a PUT request to update customer information
-  axios.put('http://localhost:8080/customerData/AccountInfo', updatedCustomerInfo, {
+  axios.put('https://coogtech-backend.vercel.app/customerData/AccountInfo', updatedCustomerInfo, {
     withCredentials: true
   })
     .then(response => {

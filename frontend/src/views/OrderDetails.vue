@@ -58,7 +58,7 @@
       async fetchOrderFeedback() {
       try {
         const response = await fetch(
-          `http://localhost:8080/customerData/Feedback/${this.OrderID}`,
+          `https://coogtech-backend.vercel.app/customerData/Feedback/${this.OrderID}`,
           {
             method: 'GET',
             credentials: 'include', // Use 'include' to send cookies with the request
@@ -80,7 +80,7 @@
     },
         async fetchUserInfo() {
             try {
-                const response = await fetch('http://localhost:8080/UserInformation', {
+                const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
                 method: 'GET',
                 credentials: 'include', // Use 'include' to send cookies with the request
                 headers: {
@@ -102,7 +102,7 @@
       },
         async fetchOrderDetails() {
             try {
-                const response = await axios.get(`http://localhost:8080/customerData/Orders/${this.$route.params.id}`);
+                const response = await axios.get(`https://coogtech-backend.vercel.app/customerData/Orders/${this.$route.params.id}`);
                 if (response.status === 200) {
                     this.orderDetails = response.data.OrderDetails;
                     this.fetchOrderFeedback(this.$route.params.id);
@@ -128,7 +128,7 @@
     async submitFeedback() {
       try {
         const response = await axios.post(
-          'http://localhost:8080/customerData/Feedback',
+          'https://coogtech-backend.vercel.app/customerData/Feedback',
           {
             OrderID: this.orderDetails.OrderID,
             Username: this.username,

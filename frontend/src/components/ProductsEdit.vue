@@ -65,7 +65,7 @@
     methods: {
       fetchProducts() {
         // Replace with your actual API endpoint
-        axios.get('http://localhost:8080/adminData/Products')
+        axios.get('https://coogtech-backend.vercel.app/adminData/Products')
           .then(response => {
             this.products = response.data;
             console.log(response.data)
@@ -84,7 +84,7 @@
       },
       deleteProduct(productId) {
         // Replace with your actual API endpoint
-        axios.delete(`http://localhost:8080/adminData/Products/${productId}`)
+        axios.delete(`https://coogtech-backend.vercel.app/adminData/Products/${productId}`)
           .then(() => {
             // Refresh the list of products
             this.fetchProducts();

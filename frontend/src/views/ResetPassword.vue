@@ -65,7 +65,7 @@ export default {
             }
 
             try {
-                const response = await axios.put('http://localhost:8080/customerData/ChangePassword', {
+                const response = await axios.put('https://coogtech-backend.vercel.app/customerData/ChangePassword', {
                     Password: this.newPassword,
                     CustomerEmail: this.email
                 });

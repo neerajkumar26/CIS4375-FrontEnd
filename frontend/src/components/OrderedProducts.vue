@@ -52,7 +52,7 @@
       };
     },
     mounted() {
-      axios.get(`http://localhost:8080/customerData/Orders/${this.OrderID}/products`)
+      axios.get(`https://coogtech-backend.vercel.app/customerData/Orders/${this.OrderID}/products`)
         .then(response => {
             console.log(response.data)
           this.orderedProducts = response.data;

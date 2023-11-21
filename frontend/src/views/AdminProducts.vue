@@ -127,7 +127,7 @@ export default {
     methods: {
         async fetchCustomProducts() {
             try {
-                const response = await fetch('http://localhost:8080/adminData/CustomProducts');
+                const response = await fetch('https://coogtech-backend.vercel.app/adminData/CustomProducts');
 
                 if (response.ok) {
                     const data = await response.json();
@@ -143,7 +143,7 @@ export default {
         },
         async fetchProductsFromAPI() {
           try {
-              const response = await fetch("http://localhost:8080/adminData/Products");
+              const response = await fetch("https://coogtech-backend.vercel.app/adminData/Products");
               if (response.ok) {
                   const data = await response.json();
                 this.Products = data.filter(product => 
@@ -182,7 +182,7 @@ export default {
       },
       deleteProduct(productId) {
         // Replace with your actual API endpoint
-        axios.delete(`http://localhost:8080/adminData/Products/${productId}`)
+        axios.delete(`https://coogtech-backend.vercel.app/adminData/Products/${productId}`)
           .then(() => {
             // Refresh the list of products
             this.fetchProductsFromAPI();
@@ -194,7 +194,7 @@ export default {
       },
       deleteCustomProduct(productId) {
         // Replace with your actual API endpoint
-        axios.delete(`http://localhost:8080/adminData/CustomProducts/${productId}`)
+        axios.delete(`https://coogtech-backend.vercel.app/adminData/CustomProducts/${productId}`)
           .then(() => {
             // Refresh the list of products
             this.fetchCustomProducts();

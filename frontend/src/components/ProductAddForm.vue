@@ -62,7 +62,7 @@ export default {
 
         console.log(formData)
 
-        const response = await axios.post('http://localhost:8080/adminData/Products', formData, {
+        const response = await axios.post('https://coogtech-backend.vercel.app/adminData/Products', formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
 

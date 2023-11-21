@@ -47,7 +47,7 @@ export default {
         // Fetch product details when the component is mounted
         onMounted(async () => {
             try {
-                const response = await fetch(`http://localhost:8080/adminData/Products/${router.currentRoute.value.params.id}`);
+                const response = await fetch(`https://coogtech-backend.vercel.app/adminData/Products/${router.currentRoute.value.params.id}`);
                 if (response.ok) {
                     const data = await response.json();
                     product.value = data.ProductDetails;
@@ -69,7 +69,7 @@ export default {
 
         const fetchSimilarProducts = async (productName) => {
           try {
-            const response = await fetch(`http://localhost:8080/adminData/Products?name=${productName}`);
+            const response = await fetch(`https://coogtech-backend.vercel.app/adminData/Products?name=${productName}`);
             if (response.ok) {
               const data = await response.json();
               

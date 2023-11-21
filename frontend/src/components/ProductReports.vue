@@ -92,7 +92,7 @@
           const firstDayOfNextMonth = startDate.clone().subtract(1, 'months').endOf('month').format('MM/DD/YYYY');
           const lastDayOfNextMonth = startDate.clone().add(0, 'months').endOf('month').format('MM/DD/YYYY');
 
-          const response = await axios.get('http://localhost:8080/adminData/Reports/TotalSalesByType', {
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/TotalSalesByType', {
             params: {
               startDate: firstDayOfNextMonth,
               endDate: lastDayOfNextMonth,
@@ -120,7 +120,7 @@
           console.log(lastDayOfNextMonth)
 
         try {
-          const response = await axios.get('http://localhost:8080/adminData/Reports/TotalSalesByType', {
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/TotalSalesByType', {
             params: {
               startDate: firstDayOfNextMonth,
               endDate: lastDayOfNextMonth,
@@ -146,7 +146,7 @@
         const lastDayOfNextMonth = startDate.clone().add(1, 'months').endOf('month').format('MM/DD/YYYY');
 
       try {
-        const response = await axios.get('http://localhost:8080/adminData/Reports/Top-Selling-Products', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Top-Selling-Products', {
           params: {
             startDate: firstDayOfNextMonth,
             endDate: lastDayOfNextMonth,

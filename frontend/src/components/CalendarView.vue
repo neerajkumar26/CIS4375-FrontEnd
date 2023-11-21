@@ -28,7 +28,7 @@ export default {
     console.log('Component created'); // Log component creation
 
     // Fetch orders data from your API
-    axios.get('http://localhost:8080/adminData/Orders')
+    axios.get('https://coogtech-backend.vercel.app/adminData/Orders')
       .then((ordersResponse) => {
         console.log('Orders Response:', ordersResponse.data); // Log the entire response
 
@@ -50,7 +50,7 @@ export default {
           console.log('Order Events:', orderEvents);
 
           // Fetch custom orders data from your API
-          axios.get('http://localhost:8080/adminData/CustomOrders')
+          axios.get('https://coogtech-backend.vercel.app/adminData/CustomOrders')
             .then((customOrdersResponse) => {
               console.log('Custom Orders Response:', customOrdersResponse.data); // Log the entire response
 

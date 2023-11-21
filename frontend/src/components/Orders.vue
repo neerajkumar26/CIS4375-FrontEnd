@@ -50,7 +50,7 @@ export default {
     },
   },
   mounted() {
-    fetch("http://localhost:8080/adminData/Orders")
+    fetch("https://coogtech-backend.vercel.app/adminData/Orders")
       .then(response => response.json())
       .then(data => {
         this.orders = data;

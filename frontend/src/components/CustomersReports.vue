@@ -49,7 +49,7 @@
         this.loading = true;
   
         try {
-          const response = await axios.get('http://localhost:8080/adminData/Reports/TopPayingCustomers');
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/TopPayingCustomers');
   
           this.topPayingCustomers = response.data;
           this.error = null;

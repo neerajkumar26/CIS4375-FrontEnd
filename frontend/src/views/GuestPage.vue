@@ -90,7 +90,7 @@ const products = ref([]);
 
 const fetchProductsFromAPI = async () => {
     try {
-        const response = await fetch("http://localhost:8080/adminData/Products");
+        const response = await fetch("https://coogtech-backend.vercel.app/adminData/Products");
         if (response.ok) {
             const data = await response.json();
             products.value = data;

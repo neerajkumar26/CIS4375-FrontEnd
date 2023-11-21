@@ -10,7 +10,7 @@ export const productsStore = defineStore('products', {
     async fetchProductsFromDB() {
       try {
         // Make a GET request to your backend API to fetch products from the database
-        const response = await fetch('http://localhost:8080/adminData/Products');
+        const response = await fetch('https://coogtech-backend.vercel.app/adminData/Products');
 
         if (response.ok) {
           const data = await response.json();

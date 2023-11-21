@@ -68,7 +68,7 @@
   
       onMounted(async () => {
         try {
-          const response = await axios.get(`http://localhost:8080/adminData/Products/${props.productId}`);
+          const response = await axios.get(`https://coogtech-backend.vercel.app/adminData/Products/${props.productId}`);
           product.value = { ...response.data.ProductDetails };
           
           // If the product has an image URL, set it for preview
@@ -94,7 +94,7 @@
             formData.append('ProductImage', product.value.ProductImage);
           }
   
-          await axios.put(`http://localhost:8080/adminData/Products/${props.productId}`, formData, {
+          await axios.put(`https://coogtech-backend.vercel.app/adminData/Products/${props.productId}`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

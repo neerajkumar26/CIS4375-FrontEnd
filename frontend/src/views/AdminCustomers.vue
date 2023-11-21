@@ -54,7 +54,7 @@
     },
     
     mounted() {
-      fetch("http://localhost:8080/adminData/Customers")
+      fetch("https://coogtech-backend.vercel.app/adminData/Customers")
         .then(response => response.json())
         .then(data => {
           this.customers = data;

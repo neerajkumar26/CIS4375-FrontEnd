@@ -60,7 +60,7 @@
     methods: {
         async fetchUserInfo() {
             try {
-                const response = await fetch('http://localhost:8080/UserInformation', {
+                const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
                 method: 'GET',
                 credentials: 'include', // Use 'include' to send cookies with the request
                 headers: {
@@ -82,7 +82,7 @@
       },
           async fetchOrderDetails() {
               try {
-                  const response = await axios.get(`http://localhost:8080/customerData/CustomOrders/${this.$route.params.id}`);
+                  const response = await axios.get(`https://coogtech-backend.vercel.app/customerData/CustomOrders/${this.$route.params.id}`);
                   if (response.status === 200) {
                       this.orderDetails = response.data.OrderDetails;
                   } else {

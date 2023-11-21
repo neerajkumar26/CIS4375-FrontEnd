@@ -104,7 +104,7 @@ export default {
         const firstDayOfNextMonth = startDate.clone().add(1, 'months').startOf('month').format('MM/DD/YYYY');;
         const lastDayOfNextMonth = startDate.clone().add(1, 'months').endOf('month').format('MM/DD/YYYY');
 
-        const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/', {
           params: {
             startDate: firstDayOfNextMonth,
             endDate: lastDayOfNextMonth,
@@ -140,7 +140,7 @@ export default {
         const firstDayOfNextMonth = startDate.clone().add(1, 'months').startOf('month').format('MM/DD/YYYY');;
         const lastDayOfNextMonth = startDate.clone().add(2, 'months').endOf('month').format('MM/DD/YYYY');
 
-        const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/', {
           params: {
             startDate: firstDayOfNextMonth,
             endDate: lastDayOfNextMonth,
@@ -176,7 +176,7 @@ export default {
         const firstDayOfLastMonth = startDate.clone().subtract(1, 'months').startOf('month').format('MM/DD/YYYY');;
         const lastDayOfLastMonth = startDate.clone().subtract(1, 'months').endOf('month').format('MM/DD/YYYY');
 
-        const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/', {
           params: {
             startDate: firstDayOfLastMonth,
             endDate: lastDayOfLastMonth,
@@ -212,7 +212,7 @@ export default {
         const firstDayOfLastMonth = startDate.clone().subtract(1, 'months').startOf('month').format('MM/DD/YYYY');;
         const lastDayOfLastMonth = startDate.clone().subtract(2, 'months').endOf('month').format('MM/DD/YYYY');
 
-        const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/', {
           params: {
             startDate: firstDayOfLastMonth,
             endDate: lastDayOfLastMonth,

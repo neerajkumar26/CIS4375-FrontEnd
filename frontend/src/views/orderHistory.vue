@@ -91,7 +91,7 @@ export default {
     methods: {
         async fetchUserInfo() {
             try {
-                const response = await fetch('http://localhost:8080/UserInformation', {
+                const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
                     method: 'GET',
                     credentials: 'include', // Use 'include' to send cookies with the request
                     headers: {
@@ -113,7 +113,7 @@ export default {
         },
         async fetchCustomOrderHistory() {
             try {
-                const response = await fetch('http://localhost:8080/customerData/CustomOrders', {
+                const response = await fetch('https://coogtech-backend.vercel.app/customerData/CustomOrders', {
                     method: 'GET',
                     credentials: 'include', // Use 'include' to send cookies with the request
                     headers: {
@@ -135,7 +135,7 @@ export default {
         },
         async fetchOrderHistory() {
             try {
-                const response = await fetch('http://localhost:8080/customerData/Orders', {
+                const response = await fetch('https://coogtech-backend.vercel.app/customerData/Orders', {
                     method: 'GET',
                     credentials: 'include', // Use 'include' to send cookies with the request
                     headers: {

@@ -135,7 +135,7 @@ export default {
         },
         signup() {
             // Make a POST request to the backend /SignUp endpoint
-            axios.post('http://localhost:8080/SignUp', this.userData)
+            axios.post('https://coogtech-backend.vercel.app/SignUp', this.userData)
                 .then(response => {
                     // Handle a successful response, e.g., show a success message or redirect
                     console.log('Signup successful', response.data);

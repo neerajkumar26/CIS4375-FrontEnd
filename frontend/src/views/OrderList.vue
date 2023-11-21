@@ -86,7 +86,7 @@
     },
     mounted() {
       // Fetch standard orders
-      fetch("http://localhost:8080/adminData/ORDERS")
+      fetch("https://coogtech-backend.vercel.app/adminData/ORDERS")
         .then(response => response.json())
         .then(data => {
           this.standardOrders = data;
@@ -96,7 +96,7 @@
         });
   
       // Fetch custom orders
-      fetch("http://localhost:8080/adminData/CUSTOM_ORDERS")
+      fetch("https://coogtech-backend.vercel.app/adminData/CUSTOM_ORDERS")
         .then(response => response.json())
         .then(data => {
           this.customOrders = data;

@@ -71,7 +71,7 @@
           const firstDayOfNextMonth = startDate.clone().subtract(10, 'years').startOf('year').format('MM/DD/YYYY');;
           const lastDayOfNextMonth = startDate.clone().add(1, 'months').endOf('month').format('MM/DD/YYYY');
   
-          const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/Total', {
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/Total', {
             params: {
               startDate: firstDayOfNextMonth ,
               endDate: lastDayOfNextMonth,
@@ -98,7 +98,7 @@
           const firstDayOfNextMonth = startDate.clone().subtract(1, 'months').startOf('month').format('MM/DD/YYYY');;
           const lastDayOfNextMonth = startDate.clone().subtract(1, 'months').endOf('month').format('MM/DD/YYYY');
   
-          const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/Total', {
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/Total', {
             params: {
               startDate: firstDayOfNextMonth,
               endDate: lastDayOfNextMonth,
@@ -125,7 +125,7 @@
           const lastDayOfNextMonth = startDate.clone().add(0, 'months').endOf('month').format('MM/DD/YYYY');
           console.log(firstDayOfNextMonth, lastDayOfNextMonth )
   
-          const response = await axios.get('http://localhost:8080/adminData/Reports/Between-Dates/Total', {
+          const response = await axios.get('https://coogtech-backend.vercel.app/adminData/Reports/Between-Dates/Total', {
             params: {
               startDate: firstDayOfNextMonth,
               endDate: lastDayOfNextMonth,

@@ -71,7 +71,7 @@ setup(props) {
 
     const fetchUserInfo = async () => {
         try {
-        const response = await fetch('http://localhost:8080/UserInformation', {
+        const response = await fetch('https://coogtech-backend.vercel.app/UserInformation', {
             method: 'GET',
             credentials: 'include', // Use 'include' to send cookies with the request
             headers: {
@@ -95,7 +95,7 @@ setup(props) {
 
     const loadCustomerInfo = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/customerData/AccountInfo/', {
+        const response = await axios.get('https://coogtech-backend.vercel.app/customerData/AccountInfo/', {
           withCredentials: true // Include credentials for authentication if needed
         });
 
@@ -120,7 +120,7 @@ setup(props) {
             
             const formattedDate = moment(orderInfo.value.DateScheduled).format('MM/DD/YYYY');
 
-            const response = await axios.post('http://localhost:8080/customerData/Orders', {
+            const response = await axios.post('https://coogtech-backend.vercel.app/customerData/Orders', {
               Username: orderInfo.value.Username,
               StatusID: orderInfo.value.StatusID,
               City: orderInfo.value.City,
@@ -133,7 +133,7 @@ setup(props) {
 
             // Add products to the created order
             for (const product of props.cartData) {
-                await axios.post(`http://localhost:8080/customerData/Orders/${OrderID}/products`, {
+                await axios.post(`https://coogtech-backend.vercel.app/customerData/Orders/${OrderID}/products`, {
                     ProductID: product.ProductID,
                     Quantity: product.Quantity
                 });
